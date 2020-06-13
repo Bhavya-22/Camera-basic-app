@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "768900166202",
+    "firebase_url": "https://camera-gallery-ec873.firebaseio.com",
+    "project_id": "camera-gallery-ec873",
+    "storage_bucket": "camera-gallery-ec873.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768900166202:android:1dc96ac4e12c1306923b03",
+        "android_client_info": {
+          "package_name": "com.example.camera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768900166202-3l18o6seq1t61uingnnf6fps2ah4ass7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.camera",
+            "certificate_hash": "d0921b7d2e5a19b57c83a2d3503263ee68d149d3"
+          }
+        },
+        {
+          "client_id": "768900166202-6efeo7essr2bo76sg3mcvefq9fnqqepu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwZTC5GlxE-AbR-fnc2tFNa3a2ss9WCRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768900166202-6efeo7essr2bo76sg3mcvefq9fnqqepu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
