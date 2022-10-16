@@ -8,4 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="buttons" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:elevation">10dp</item>
+    </style>
+
 </resources>
