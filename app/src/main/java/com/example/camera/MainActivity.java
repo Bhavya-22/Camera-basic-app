@@ -39,13 +39,15 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
     private static final int CAMERA_REQUEST_CODE = 102;
     ImageView displayImageView;
-    Button cameraBtn,galleryBtn;
+    Button cameraBtn,galleryBtn,uploadBtn;
     private static final int CAMERA_REQUEST =101;
-    String currentPhotoPath;
+    String currentPhotoPath,imageFileName;
     private static final int GALLERY_REQUEST_CODE=103;
     StorageReference storageReference;
     private Context context;
-     private ProgressDialog progressDialog;
+    private ProgressDialog progressDialog;
+    Uri contentUri;
+    File f;
 
 
     @Override
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         displayImageView=(ImageView)findViewById(R.id.imageView);
         cameraBtn =(Button)findViewById(R.id.cameraBtn);
         galleryBtn=(Button)findViewById(R.id.galleryBtn);
+        uploadBtn=(Button)findViewById(R.id.uploadBtn);
         context=this;
         progressDialog=new ProgressDialog(context);
         storageReference= FirebaseStorage.getInstance().getReference(); //To initialise the ref
@@ -117,20 +120,25 @@ public class MainActivity extends AppCompatActivity {
 
             if (resultCode == Activity.RESULT_OK)
             {
-                File f =new File(currentPhotoPath);  //Creating new file from currentPhotoPath
+                f =new File(currentPhotoPath);  //Creating new file from currentPhotoPath
                 displayImageView.setImageURI(Uri.fromFile(f));  //Set ImageView by image by Using Uri-setImageUri
                 //Uri.fromFile(f) getting the Uri from file f which is creating by using currentPhotoPath(Absolute Path)
                 //Its better to use Uri bcoz it helps to save the picture without degrading its resolution
                 Toast.makeText(this,"Saved to " + currentPhotoPath,Toast.LENGTH_SHORT).show();
 
                 Intent mediaScanIntent=new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-                Uri contentUri = Uri.fromFile(f);
+                contentUri = Uri.fromFile(f);
                 mediaScanIntent.setData(contentUri);
                 this.sendBroadcast(mediaScanIntent);
 
-
-                uploadToFirebase(f.getName(),contentUri); /*Need two parameters first the file name to store in firebase and second the
+                uploadBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        uploadToFirebase(f.getName(),contentUri); /*Need two parameters first the file name to store in firebase and second the
                 Uri show we exactly know the location of file that we have to upload*/
+                    }
+                });
+
 
             }
         }
@@ -138,14 +146,21 @@ public class MainActivity extends AppCompatActivity {
         {
             if(resultCode==Activity.RESULT_OK)
             {
-                Uri contentUri = data.getData(); //Creating content Uri from the data passed by intent data here
+                assert data != null;
+                contentUri = data.getData(); //Creating content Uri from the data passed by intent data here
                 //Next we need to create the file name just like in createImageFile
                 String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()); //Using this to create a file name also can create by another name
                 //Here we creating a SimpleDateFormat to get  TimeStamp
-                String imageFileName = "JPEG_" + timeStamp + "_" +getFileExt(contentUri); //Creating image file here, We use getFileExt to get the extension of image(jpg,png etc.)
+                imageFileName = "JPEG_" + timeStamp + "_" +getFileExt(contentUri); //Creating image file here, We use getFileExt to get the extension of image(jpg,png etc.)
                 displayImageView.setImageURI(contentUri);
 
-                uploadToFirebase(imageFileName,contentUri);
+                uploadBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        uploadToFirebase(imageFileName,contentUri);
+                    }
+                });
+
             }
 
         }
