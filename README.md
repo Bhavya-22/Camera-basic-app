@@ -48,7 +48,7 @@ To add upstream to remote, run:
 git remote add upstream https://github.com/Bhavya-22/Camera-basic-app.git
 ```
 
-Again run `git remote -v`, the response should look like:
+Again run `git remote -v`, the response should look like this:
 
 ```sh
 origin	https://github.com/Your_Username/Camera-basic-app.git  (fetch)
