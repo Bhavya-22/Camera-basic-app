@@ -23,7 +23,7 @@ You need to clone (download) it to local machine using
 git clone https://github.com/Bhavya-22/Camera-basic-app.git
 ```
 
-> This makes a local copy of repository in your machine.
+> This makes a local copy of the repository in your machine.
 
 Once you have cloned the `Camera-basic-app` repository in GitHub, move to that folder first using change directory command.
 
