@@ -58,8 +58,8 @@ See the changes using
 git remote -v
 origin    https://github.com/Your_Username/Camera-basic-app.git (fetch)
 origin    https://github.com/Your_Username/Camera-basic-app.git (push)
-upstream  https://github.com/Grumpyyash/Camera-basic-app.git (fetch)
 upstream  https://github.com/Your_Username/Camera-basic-app.git (push)
+upstream  https://github.com/Your_Username/Camera-basic-app.git (fetch)
 ```
 
 ### 4. Sync it :recycle:
@@ -117,7 +117,7 @@ Type in a message relevant for the code reviewer using
 git commit -s -m 'relevant message'
 ```
 
-Now, Push your awesome work to your remote repository using
+Now, Push your awesome (great) work to your remote repository using
 
 ```sh
 # To push your work to your remote repository
