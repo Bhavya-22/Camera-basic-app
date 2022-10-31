@@ -117,7 +117,7 @@ Type in a message relevant for the code reviewer using
 git commit -s -m 'relevant message'
 ```
 
-Now, Push your awesome work to your remote repository using
+Now, Push your awesome (great) work to your remote repository using
 
 ```sh
 # To push your work to your remote repository
