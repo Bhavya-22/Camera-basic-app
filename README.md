@@ -35,7 +35,7 @@ cd Camera-basic-app
 git remote -v
 ```
 
-The response should look like:
+The response should look like this:
 
 ```sh
 origin	https://github.com/Your_Username/Camera-basic-app.git (fetch)
