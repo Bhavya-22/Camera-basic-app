@@ -17,7 +17,7 @@ You can get your own fork/copy of [Camera-basic-app](https://github.com/Bhavya-2
 
 ### 2. Clone it :busts_in_silhouette:
 
-You need to clone (download) it to local machine using
+You need to clone (download) it to a local machine using
 
 ```sh
 git clone https://github.com/Bhavya-22/Camera-basic-app.git
