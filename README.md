@@ -61,4 +61,4 @@ upstream	https://github.com/Bhavya-22/Camera-basic-app.git (push)
 
 ## Contributing
 
-We really like contributions in several forms, see [CONTRIBUTING.md](https://github.com/Bhavya-22/Camera-basic-app/blob/master/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/Bhavya-22/Camera-basic-app/blob/master/CODE%20OF%20CONDUCT.md)
+We like contributions in several forms, see [CONTRIBUTING.md](https://github.com/Bhavya-22/Camera-basic-app/blob/master/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/Bhavya-22/Camera-basic-app/blob/master/CODE%20OF%20CONDUCT.md)
