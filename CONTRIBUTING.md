@@ -58,7 +58,7 @@ See the changes using
 git remote -v
 origin    https://github.com/Your_Username/Camera-basic-app.git (fetch)
 origin    https://github.com/Your_Username/Camera-basic-app.git (push)
-upstream  https://github.com/Grumpyyash/Camera-basic-app.git (fetch)
+upstream  https://github.com/Your_Username/Camera-basic-app.git (fetch)
 upstream  https://github.com/Grumpyyash/Camera-basic-app.git (push)
 ```
 
